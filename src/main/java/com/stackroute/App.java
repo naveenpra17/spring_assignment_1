@@ -1,6 +1,7 @@
 package com.stackroute;
 
 import com.stackroute.domain.BeanLifecycleDemoBean;
+import com.stackroute.domain.BeanPostProcessorDemoBean;
 import com.stackroute.domain.Movie;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
@@ -36,8 +37,10 @@ public class App
 ////        System.out.println(movie2==movie3);
 
 //          System.out.println(movie6);
-        BeanLifecycleDemoBean beanLifecycleDemoBean=applicationContext.getBean("beanLifeCycle",BeanLifecycleDemoBean.class);
-        System.out.println(beanLifecycleDemoBean);
-        ((ConfigurableApplicationContext)applicationContext).close();
+//        BeanLifecycleDemoBean beanLifecycleDemoBean=applicationContext.getBean("beanLifeCycle",BeanLifecycleDemoBean.class);
+//        System.out.println(beanLifecycleDemoBean);
+//        ((ConfigurableApplicationContext)applicationContext).close();
+
+        BeanPostProcessorDemoBean beanPostProcessorDemoBean=applicationContext.getBean("beanPostProcessor",BeanPostProcessorDemoBean.class);
     }
 }
