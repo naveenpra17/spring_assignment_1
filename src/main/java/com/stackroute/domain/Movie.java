@@ -39,18 +39,18 @@ public class Movie implements ApplicationContextAware , BeanNameAware, BeanFacto
     @Override//Implementing ApplicationContextAware,
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.applicationContext = applicationContext;
-        System.out.printf(applicationContext.toString() );
+//        System.out.printf(applicationContext.toString() );
      }
 
 
     @Override//implementing BeamNameAware
     public void setBeanName(String s) {
-         System.out.println("bean name is" + s);
+//         System.out.println("bean name is" + s);
     }
 
     @Override//implementing beanfactoryname
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
     this.beanFactory=beanFactory;
-        System.out.println(beanFactory+" bean factory");
+//        System.out.println(beanFactory+" bean factory");
     }
 }

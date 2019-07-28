@@ -1,9 +1,11 @@
 package com.stackroute;
 
+import com.stackroute.domain.BeanLifecycleDemoBean;
 import com.stackroute.domain.Movie;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.w3c.dom.ls.LSOutput;
@@ -34,5 +36,8 @@ public class App
 ////        System.out.println(movie2==movie3);
 
 //          System.out.println(movie6);
+        BeanLifecycleDemoBean beanLifecycleDemoBean=applicationContext.getBean("beanLifeCycle",BeanLifecycleDemoBean.class);
+        System.out.println(beanLifecycleDemoBean);
+        ((ConfigurableApplicationContext)applicationContext).close();
     }
 }
