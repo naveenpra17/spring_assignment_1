@@ -33,15 +33,6 @@ public class App
 //        Movie movie3=applicationContext.getBean("movie1",Movie.class);
 ////        System.out.println(movie2==movie3);
 
-        //bean movie with auto wire
-        Movie movie4=applicationContext.getBean("movieA",Movie.class);
-        Movie movie5=applicationContext.getBean("movieB",Movie.class);
-        System.out.println(movie4);
-        System.out.println(movie5);
-
-
-        //bean movie with constructionn injection
-        Movie movie6=applicationContext.getBean("movieC",Movie.class);
-        System.out.println(movie6);
+//          System.out.println(movie6);
     }
 }
